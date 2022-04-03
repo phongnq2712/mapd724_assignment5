@@ -75,21 +75,6 @@ struct ContentView: View {
             }
         }
     }
-    
-    /**
-     * Event for pressing Start button
-     */
-    private func startPressedButton() {
-        // Redirect to main screen
-        
-    }
-    
-    /**
-     * Event for pressing Setting button
-     */
-    private func settingPressedButton() {
-        
-    }
 }
 
 struct ContentView_Previews: PreviewProvider {

@@ -9,62 +9,67 @@
 
 import SwiftUI
 import CoreData
+import WebKit
 
 struct MainView: View {
     @EnvironmentObject private var themeManager: ThemeManager
     
     var body: some View {
+
         ZStack {
-//            Rectangle()
-//                .foregroundColor(Color(red: 197/255,
-//                    green: 231/255, blue: 255/255))
-//                .edgesIgnoringSafeArea(.all)
             themeManager.selectedTheme.primaryColor.edgesIgnoringSafeArea(.all)
-            
+
             VStack {
-                                
                 HStack {
                     Button(action:  {
-                    
+                        
                     }) {
-                        Image("toronto-1").resizable()
+                        NavigationLink(destination:City(flag: 1), label: {
+                            // Image Button
+                            Image("toronto-1").resizable()
+                                .frame(width: 265.0, height: 155.0)
+                                .aspectRatio(1, contentMode: .fit)
+                                .padding(.all, 10)
+                                .background(Color.white.opacity(0.8))
+                                .cornerRadius(10)
+                        })
+                        
+                    }.padding([.leading, .trailing, .bottom], 10)
+                }
+
+                HStack {
+                    Button(action:  {
+
+                    }) {
+                        NavigationLink(destination:City(flag: 2), label: {
+                            Image("montreal").resizable()
                             .frame(width: 265.0, height: 155.0)
                             .aspectRatio(1, contentMode: .fit)
                             .padding(.all, 10)
                             .background(Color.white.opacity(0.8))
                             .cornerRadius(10)
-                        }.padding(.bottom, 10)
-                }.padding([.leading, .trailing, .bottom], 10)
+                        })
+                    }.padding([.leading, .trailing, .bottom], 10)
+                }
                 
                 HStack {
                     Button(action:  {
-                    
+
                     }) {
-                        Image("montreal").resizable()
+                        NavigationLink(destination:City(flag: 3), label: {
+                            Image("vancouver").resizable()
                             .frame(width: 265.0, height: 155.0)
                             .aspectRatio(1, contentMode: .fit)
                             .padding(.all, 10)
                             .background(Color.white.opacity(0.8))
                             .cornerRadius(10)
-                        }.padding(.bottom, 10)
-                }.padding([.leading, .trailing, .bottom], 10)
-                
+                        })
+                    }.padding([.leading, .trailing, .bottom], 10)
+                }
+
                 HStack {
                     Button(action:  {
-                    
-                    }) {
-                        Image("vancouver").resizable()
-                            .frame(width: 265.0, height: 155.0)
-                            .aspectRatio(1, contentMode: .fit)
-                            .padding(.all, 10)
-                            .background(Color.white.opacity(0.8))
-                            .cornerRadius(10)
-                        }.padding(.bottom, 10)
-                }.padding([.leading, .trailing, .bottom], 10)
-                
-                HStack {
-                    Button(action:  {
-                    
+
                     }) {
                     Image("google-maps").resizable()
                         .frame(width: 125.0, height: 65.0)

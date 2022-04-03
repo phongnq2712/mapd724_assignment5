@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		315ECA2F27FA1ECC0024825A /* Toronto.html in Resources */ = {isa = PBXBuildFile; fileRef = 315ECA2E27FA1ECC0024825A /* Toronto.html */; };
+		315ECA3327FA324C0024825A /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315ECA3227FA324C0024825A /* City.swift */; };
+		315ECA3727FA44510024825A /* Montreal.html in Resources */ = {isa = PBXBuildFile; fileRef = 315ECA3627FA44510024825A /* Montreal.html */; };
+		315ECA3927FA45410024825A /* Vancouver.html in Resources */ = {isa = PBXBuildFile; fileRef = 315ECA3827FA45410024825A /* Vancouver.html */; };
 		31A9B4AA27E7DA800070AD77 /* QuocPhongNgo_MAPD724_Assignment4App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A9B4A927E7DA800070AD77 /* QuocPhongNgo_MAPD724_Assignment4App.swift */; };
 		31A9B4AC27E7DA800070AD77 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A9B4AB27E7DA800070AD77 /* ContentView.swift */; };
 		31A9B4AE27E7DA820070AD77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31A9B4AD27E7DA820070AD77 /* Assets.xcassets */; };
@@ -25,6 +29,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		315ECA2E27FA1ECC0024825A /* Toronto.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Toronto.html; sourceTree = "<group>"; };
+		315ECA3227FA324C0024825A /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		315ECA3627FA44510024825A /* Montreal.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Montreal.html; sourceTree = "<group>"; };
+		315ECA3827FA45410024825A /* Vancouver.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Vancouver.html; sourceTree = "<group>"; };
 		31A9B4A627E7DA800070AD77 /* QuocPhongNgo_MAPD724_Assignment5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuocPhongNgo_MAPD724_Assignment5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31A9B4A927E7DA800070AD77 /* QuocPhongNgo_MAPD724_Assignment4App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuocPhongNgo_MAPD724_Assignment4App.swift; sourceTree = "<group>"; };
 		31A9B4AB27E7DA800070AD77 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,6 +62,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		315ECA2D27F9FF120024825A /* HTML */ = {
+			isa = PBXGroup;
+			children = (
+				315ECA3827FA45410024825A /* Vancouver.html */,
+				315ECA3627FA44510024825A /* Montreal.html */,
+				315ECA2E27FA1ECC0024825A /* Toronto.html */,
+				315ECA3227FA324C0024825A /* City.swift */,
+			);
+			path = HTML;
+			sourceTree = "<group>";
+		};
 		31A9B49D27E7DA800070AD77 = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +92,7 @@
 		31A9B4A827E7DA800070AD77 /* QuocPhongNgo_MAPD724_Assignment5 */ = {
 			isa = PBXGroup;
 			children = (
+				315ECA2D27F9FF120024825A /* HTML */,
 				31A9B4D027EFBBC60070AD77 /* Theme */,
 				31A9B4C227E7E1950070AD77 /* Resources */,
 				31A9B4BC27E7E0AE0070AD77 /* Common */,
@@ -200,7 +220,10 @@
 			files = (
 				31A9B4B127E7DA820070AD77 /* Preview Assets.xcassets in Resources */,
 				31A9B4C927E7E4000070AD77 /* Poppins-SemiBold.ttf in Resources */,
+				315ECA3927FA45410024825A /* Vancouver.html in Resources */,
+				315ECA3727FA44510024825A /* Montreal.html in Resources */,
 				31A9B4AE27E7DA820070AD77 /* Assets.xcassets in Resources */,
+				315ECA2F27FA1ECC0024825A /* Toronto.html in Resources */,
 				31A9B4C727E7E2050070AD77 /* Poppins-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -213,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31A9B4D227EFBBD70070AD77 /* Theme.swift in Sources */,
+				315ECA3327FA324C0024825A /* City.swift in Sources */,
 				31A9B4B327E7DA820070AD77 /* Persistence.swift in Sources */,
 				31A9B4CB27E8394A0070AD77 /* MainView.swift in Sources */,
 				31A9B4C127E7E0D90070AD77 /* Style.swift in Sources */,

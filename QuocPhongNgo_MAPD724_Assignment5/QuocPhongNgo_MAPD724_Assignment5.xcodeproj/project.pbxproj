@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		314514CB27FE2D9F0089B11E /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314514CA27FE2D9F0089B11E /* Home.swift */; };
+		314514CD27FE2DC70089B11E /* CustomMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314514CC27FE2DC70089B11E /* CustomMapView.swift */; };
+		314514CF27FE2EF40089B11E /* CustomMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314514CE27FE2EF40089B11E /* CustomMapViewModel.swift */; };
+		314514D227FE9E530089B11E /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314514D127FE9E530089B11E /* Place.swift */; };
 		315ECA2F27FA1ECC0024825A /* Toronto.html in Resources */ = {isa = PBXBuildFile; fileRef = 315ECA2E27FA1ECC0024825A /* Toronto.html */; };
 		315ECA3327FA324C0024825A /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315ECA3227FA324C0024825A /* City.swift */; };
 		315ECA3727FA44510024825A /* Montreal.html in Resources */ = {isa = PBXBuildFile; fileRef = 315ECA3627FA44510024825A /* Montreal.html */; };
 		315ECA3927FA45410024825A /* Vancouver.html in Resources */ = {isa = PBXBuildFile; fileRef = 315ECA3827FA45410024825A /* Vancouver.html */; };
+		315ECA3B27FA6A100024825A /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315ECA3A27FA6A100024825A /* MapView.swift */; };
 		31A9B4AA27E7DA800070AD77 /* QuocPhongNgo_MAPD724_Assignment4App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A9B4A927E7DA800070AD77 /* QuocPhongNgo_MAPD724_Assignment4App.swift */; };
 		31A9B4AC27E7DA800070AD77 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A9B4AB27E7DA800070AD77 /* ContentView.swift */; };
 		31A9B4AE27E7DA820070AD77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31A9B4AD27E7DA820070AD77 /* Assets.xcassets */; };
@@ -29,10 +34,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		314514CA27FE2D9F0089B11E /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		314514CC27FE2DC70089B11E /* CustomMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMapView.swift; sourceTree = "<group>"; };
+		314514CE27FE2EF40089B11E /* CustomMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMapViewModel.swift; sourceTree = "<group>"; };
+		314514D127FE9E530089B11E /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		315ECA2E27FA1ECC0024825A /* Toronto.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Toronto.html; sourceTree = "<group>"; };
 		315ECA3227FA324C0024825A /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		315ECA3627FA44510024825A /* Montreal.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Montreal.html; sourceTree = "<group>"; };
 		315ECA3827FA45410024825A /* Vancouver.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Vancouver.html; sourceTree = "<group>"; };
+		315ECA3A27FA6A100024825A /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		31A9B4A627E7DA800070AD77 /* QuocPhongNgo_MAPD724_Assignment5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuocPhongNgo_MAPD724_Assignment5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31A9B4A927E7DA800070AD77 /* QuocPhongNgo_MAPD724_Assignment4App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuocPhongNgo_MAPD724_Assignment4App.swift; sourceTree = "<group>"; };
 		31A9B4AB27E7DA800070AD77 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,6 +72,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		314514C627FE2D6F0089B11E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				314514CE27FE2EF40089B11E /* CustomMapViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		314514C727FE2D780089B11E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				314514CA27FE2D9F0089B11E /* Home.swift */,
+				314514CC27FE2DC70089B11E /* CustomMapView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		314514D027FE9E410089B11E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				314514D127FE9E530089B11E /* Place.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		315ECA2D27F9FF120024825A /* HTML */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +127,9 @@
 		31A9B4A827E7DA800070AD77 /* QuocPhongNgo_MAPD724_Assignment5 */ = {
 			isa = PBXGroup;
 			children = (
+				314514D027FE9E410089B11E /* Model */,
+				314514C727FE2D780089B11E /* View */,
+				314514C627FE2D6F0089B11E /* ViewModel */,
 				315ECA2D27F9FF120024825A /* HTML */,
 				31A9B4D027EFBBC60070AD77 /* Theme */,
 				31A9B4C227E7E1950070AD77 /* Resources */,
@@ -104,6 +142,7 @@
 				31A9B4AF27E7DA820070AD77 /* Preview Content */,
 				31A9B4CA27E8394A0070AD77 /* MainView.swift */,
 				31A9B4CE27EE5C530070AD77 /* SettingView.swift */,
+				315ECA3A27FA6A100024825A /* MapView.swift */,
 			);
 			path = QuocPhongNgo_MAPD724_Assignment5;
 			sourceTree = "<group>";
@@ -239,9 +278,14 @@
 				315ECA3327FA324C0024825A /* City.swift in Sources */,
 				31A9B4B327E7DA820070AD77 /* Persistence.swift in Sources */,
 				31A9B4CB27E8394A0070AD77 /* MainView.swift in Sources */,
+				315ECA3B27FA6A100024825A /* MapView.swift in Sources */,
 				31A9B4C127E7E0D90070AD77 /* Style.swift in Sources */,
+				314514CB27FE2D9F0089B11E /* Home.swift in Sources */,
 				31A9B4AC27E7DA800070AD77 /* ContentView.swift in Sources */,
+				314514CF27FE2EF40089B11E /* CustomMapViewModel.swift in Sources */,
+				314514D227FE9E530089B11E /* Place.swift in Sources */,
 				31A9B4D427EFBDEA0070AD77 /* ThemeCollection.swift in Sources */,
+				314514CD27FE2DC70089B11E /* CustomMapView.swift in Sources */,
 				31A9B4BF27E7E0CF0070AD77 /* Font.swift in Sources */,
 				31A9B4CF27EE5C530070AD77 /* SettingView.swift in Sources */,
 				31A9B4AA27E7DA800070AD77 /* QuocPhongNgo_MAPD724_Assignment4App.swift in Sources */,
@@ -379,6 +423,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"QuocPhongNgo_MAPD724_Assignment5/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -407,6 +452,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"QuocPhongNgo_MAPD724_Assignment5/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

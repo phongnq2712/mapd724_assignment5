@@ -71,12 +71,14 @@ struct MainView: View {
                     Button(action:  {
 
                     }) {
-                    Image("google-maps").resizable()
-                        .frame(width: 125.0, height: 65.0)
-                        .aspectRatio(1, contentMode: .fit)
-                        .background(Color.white.opacity(0.8))
-                        .cornerRadius(10)
-                        .padding(.all, 10)
+                        NavigationLink(destination:Home(), label: {
+                            Image("google-maps").resizable()
+                            .frame(width: 125.0, height: 65.0)
+                            .aspectRatio(1, contentMode: .fit)
+                            .background(Color.white.opacity(0.8))
+                            .cornerRadius(10)
+                            .padding(.all, 10)
+                        })
                     }
                 }
             }

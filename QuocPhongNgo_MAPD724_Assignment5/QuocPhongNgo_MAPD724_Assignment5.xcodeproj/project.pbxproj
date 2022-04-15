@@ -11,6 +11,10 @@
 		314514CD27FE2DC70089B11E /* CustomMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314514CC27FE2DC70089B11E /* CustomMapView.swift */; };
 		314514CF27FE2EF40089B11E /* CustomMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314514CE27FE2EF40089B11E /* CustomMapViewModel.swift */; };
 		314514D227FE9E530089B11E /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314514D127FE9E530089B11E /* Place.swift */; };
+		314514DC2809D6750089B11E /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314514DB2809D6750089B11E /* HelpView.swift */; };
+		314514DE280A07C90089B11E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 314514DD280A07C90089B11E /* GoogleService-Info.plist */; };
+		314514E1280A0AB70089B11E /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 314514E0280A0AB70089B11E /* FirebaseAnalytics */; };
+		314514E3280A0AB70089B11E /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 314514E2280A0AB70089B11E /* FirebaseDatabase */; };
 		315ECA2F27FA1ECC0024825A /* Toronto.html in Resources */ = {isa = PBXBuildFile; fileRef = 315ECA2E27FA1ECC0024825A /* Toronto.html */; };
 		315ECA3327FA324C0024825A /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315ECA3227FA324C0024825A /* City.swift */; };
 		315ECA3727FA44510024825A /* Montreal.html in Resources */ = {isa = PBXBuildFile; fileRef = 315ECA3627FA44510024825A /* Montreal.html */; };
@@ -38,6 +42,8 @@
 		314514CC27FE2DC70089B11E /* CustomMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMapView.swift; sourceTree = "<group>"; };
 		314514CE27FE2EF40089B11E /* CustomMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMapViewModel.swift; sourceTree = "<group>"; };
 		314514D127FE9E530089B11E /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		314514DB2809D6750089B11E /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
+		314514DD280A07C90089B11E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		315ECA2E27FA1ECC0024825A /* Toronto.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Toronto.html; sourceTree = "<group>"; };
 		315ECA3227FA324C0024825A /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		315ECA3627FA44510024825A /* Montreal.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Montreal.html; sourceTree = "<group>"; };
@@ -66,6 +72,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				314514E3280A0AB70089B11E /* FirebaseDatabase in Frameworks */,
+				314514E1280A0AB70089B11E /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +151,8 @@
 				31A9B4CA27E8394A0070AD77 /* MainView.swift */,
 				31A9B4CE27EE5C530070AD77 /* SettingView.swift */,
 				315ECA3A27FA6A100024825A /* MapView.swift */,
+				314514DB2809D6750089B11E /* HelpView.swift */,
+				314514DD280A07C90089B11E /* GoogleService-Info.plist */,
 			);
 			path = QuocPhongNgo_MAPD724_Assignment5;
 			sourceTree = "<group>";
@@ -215,6 +225,10 @@
 			dependencies = (
 			);
 			name = QuocPhongNgo_MAPD724_Assignment5;
+			packageProductDependencies = (
+				314514E0280A0AB70089B11E /* FirebaseAnalytics */,
+				314514E2280A0AB70089B11E /* FirebaseDatabase */,
+			);
 			productName = QuocPhongNgo_MAPD724_Assignment4;
 			productReference = 31A9B4A627E7DA800070AD77 /* QuocPhongNgo_MAPD724_Assignment5.app */;
 			productType = "com.apple.product-type.application";
@@ -243,6 +257,9 @@
 				Base,
 			);
 			mainGroup = 31A9B49D27E7DA800070AD77;
+			packageReferences = (
+				314514DF280A0AB70089B11E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 31A9B4A727E7DA800070AD77 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31A9B4B127E7DA820070AD77 /* Preview Assets.xcassets in Resources */,
+				314514DE280A07C90089B11E /* GoogleService-Info.plist in Resources */,
 				31A9B4C927E7E4000070AD77 /* Poppins-SemiBold.ttf in Resources */,
 				315ECA3927FA45410024825A /* Vancouver.html in Resources */,
 				315ECA3727FA44510024825A /* Montreal.html in Resources */,
@@ -287,6 +305,7 @@
 				31A9B4D427EFBDEA0070AD77 /* ThemeCollection.swift in Sources */,
 				314514CD27FE2DC70089B11E /* CustomMapView.swift in Sources */,
 				31A9B4BF27E7E0CF0070AD77 /* Font.swift in Sources */,
+				314514DC2809D6750089B11E /* HelpView.swift in Sources */,
 				31A9B4CF27EE5C530070AD77 /* SettingView.swift in Sources */,
 				31A9B4AA27E7DA800070AD77 /* QuocPhongNgo_MAPD724_Assignment4App.swift in Sources */,
 				31A9B4B627E7DA820070AD77 /* QuocPhongNgo_MAPD724_Assignment4.xcdatamodeld in Sources */,
@@ -493,6 +512,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		314514DF280A0AB70089B11E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		314514E0280A0AB70089B11E /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 314514DF280A0AB70089B11E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		314514E2280A0AB70089B11E /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 314514DF280A0AB70089B11E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		31A9B4B427E7DA820070AD77 /* QuocPhongNgo_MAPD724_Assignment4.xcdatamodeld */ = {

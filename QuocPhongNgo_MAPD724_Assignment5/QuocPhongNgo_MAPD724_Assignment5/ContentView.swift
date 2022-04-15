@@ -4,7 +4,7 @@
  * Author:         Quoc Phong Ngo
  * Student ID:   301148406
  * Version:        1.0
- * Date Modified:   April 2nd, 2022
+ * Date Modified:   April 15th, 2022
  */
 
 import SwiftUI
@@ -69,6 +69,19 @@ struct ContentView: View {
                             .frame(width: 125, height: 36, alignment: .center)
                             .background(RoundedRectangle(cornerRadius: 24,
                                 style: .continuous).fill(Color.red))
+                        }).padding(.bottom, 30)
+                    }
+                    HStack {
+                        // Help Button
+                        NavigationLink(destination:HelpView(), label: {
+                            // Start Button
+                            Text("HELP")
+                            .font(Style.TextSize.subtitle3.font(.semiBold))
+                            .accentColor(.white)
+                            .foregroundColor(Color.accentColor)
+                            .frame(width: 125, height: 36, alignment: .center)
+                            .background(RoundedRectangle(cornerRadius: 24,
+                                                         style: .continuous).fill(Color.brown))
                         }).padding(.bottom, 100)
                     }
                 }

@@ -4,7 +4,7 @@
  * Author:         Quoc Phong Ngo
  * Student ID:   301148406
  * Version:        1.0
- * Date Modified:   April 2nd, 2022
+ * Date Modified:   April 15th, 2022
  */
 
 import SwiftUI
@@ -15,7 +15,6 @@ struct SettingView: View {
     var body: some View {
         NavigationView {
             List {
-                about
                 changeTheme
             }
             .font(.headline)
@@ -28,18 +27,6 @@ struct SettingView: View {
 }
 
 extension SettingView {
-    private var about : some View {
-        Section(header: Text("About")) {
-            VStack(alignment: .leading) {
-                Text("This app is written by SwiftUI, using WebKit and MapKit")
-                    .font(.callout)
-                    .fontWeight(.medium)
-                    .foregroundColor(Color.black)
-            }
-            .padding(.vertical)
-        }
-    }
-    
     private var changeTheme : some View {
         Section(header: Text("Theme color")) {
             VStack(alignment: .leading) {

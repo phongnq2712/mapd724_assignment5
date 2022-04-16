@@ -12,6 +12,8 @@ import CoreData
 
 struct SettingView: View {
     @EnvironmentObject private var themeManager: ThemeManager
+    @State private var showingAlert = false
+    
     var body: some View {
         NavigationView {
             List {
@@ -31,14 +33,19 @@ extension SettingView {
         Section(header: Text("Theme color")) {
             VStack(alignment: .leading) {
                 ForEach(0..<themeManager.themes.count) {
-                    themCount in
+                    themeCount in
                     Button(action: {
                         withAnimation {
-                            themeManager.applyTheme(themCount)
+                            showingAlert = true
+                            themeManager.applyTheme(themeCount)
+                            // save theme into firebase
+                            themeManager.updateTheme(themeIndex: themeCount)
                         }
                     }, label: {
-                        Text("Change \(themeManager.themes[themCount].themeName)")
-                    })
+                        Text("Change \(themeManager.themes[themeCount].themeName)")
+                    }).alert("Save theme color successfully!", isPresented: $showingAlert) {
+                        Button("OK", role: .cancel) { }
+                    }
                 }
                 .buttonStyle(.bordered)
                 .buttonBorderShape(.roundedRectangle)

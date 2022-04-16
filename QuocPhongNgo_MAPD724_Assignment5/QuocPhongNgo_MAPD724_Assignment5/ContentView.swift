@@ -9,6 +9,7 @@
 
 import SwiftUI
 import CoreData
+import FirebaseFirestore
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext

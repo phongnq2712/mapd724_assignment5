@@ -31,6 +31,7 @@ struct SettingView: View {
 extension SettingView {
     private var changeTheme : some View {
         Section(header: Text("Theme color")) {
+            themeManager.selectedTheme.primaryColor.edgesIgnoringSafeArea(.all)
             VStack(alignment: .leading) {
                 ForEach(0..<themeManager.themes.count) {
                     themeCount in

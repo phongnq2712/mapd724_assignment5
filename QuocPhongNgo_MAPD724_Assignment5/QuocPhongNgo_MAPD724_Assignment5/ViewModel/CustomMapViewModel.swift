@@ -30,6 +30,9 @@ class CustomMapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate 
     
     @Published var destinationPlace = CLLocationCoordinate2D()
     
+    @Published var annotationStart = ""
+    @Published var annotationDestination = ""
+    
     func updateMapType() {
         if mapType == .standard {
             mapType = .hybrid
@@ -40,11 +43,11 @@ class CustomMapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate 
         }
     }
     
-    func focusLocation() {
-        guard let _ = region else {return}
-        mapView.setRegion(region, animated: true)
-        mapView.setVisibleMapRect(mapView.visibleMapRect, animated: true)
-    }
+//    func focusLocation() {
+//        guard let _ = region else {return}
+//        mapView.setRegion(region, animated: true)
+//        mapView.setVisibleMapRect(mapView.visibleMapRect, animated: true)
+//    }
     
     func searchQuery(searchType: String) {
         places.removeAll()
@@ -82,6 +85,11 @@ class CustomMapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate 
         let pointAnnotation = MKPointAnnotation()
         pointAnnotation.coordinate = coordinate
         pointAnnotation.title = place.place.name ?? "No Name"
+        if typeOfPlace == "start" {
+            self.annotationStart = pointAnnotation.title ?? ""
+        } else if typeOfPlace == "destination" {
+            self.annotationDestination = pointAnnotation.title ?? ""
+        }
         
 //        mapView.removeAnnotations(mapView.annotations)
         mapView.addAnnotation(pointAnnotation)

@@ -126,8 +126,8 @@
             filePath = "QuocPhongNgo_MAPD724_Assignment5/ViewModel/CustomMapViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
             landmarkName = "selectPlace(place:typeOfPlace:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -142,8 +142,8 @@
             filePath = "QuocPhongNgo_MAPD724_Assignment5/View/CustomMapView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
             landmarkName = "mapView(_:rendererFor:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -152,14 +152,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "F5A39B72-C530-4CEA-838A-CA58AF3BF652"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "QuocPhongNgo_MAPD724_Assignment5/View/CustomMapView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
             landmarkName = "makeUIView(context:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -183,65 +183,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E74F7B07-EA6D-4BAC-A487-D41D635E52A8"
-            shouldBeEnabled = "Yes"
+            uuid = "74EB8EB1-19B2-4D51-ADB1-D553B2E7331D"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "QuocPhongNgo_MAPD724_Assignment5/Theme/ThemeManager.swift"
+            filePath = "QuocPhongNgo_MAPD724_Assignment5/View/CustomMapView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "getTheme()"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "updateUIView(_:context:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4669C594-6185-482F-A0B8-FF589DE1B9C0"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "QuocPhongNgo_MAPD724_Assignment5/Theme/ThemeManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
-            landmarkName = "getTheme()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "4669C594-6185-482F-A0B8-FF589DE1B9C0 - b10e1a2f1549ac60"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRDocumentSnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in QuocPhongNgo_MAPD724_Assignment5.ThemeManager.getTheme() -&gt; ()"
-                  moduleName = "QuocPhongNgo_MAPD724_Assignment5"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/phong/Documents/Centennial/Mobile%20course/724/mapd724_assignment5/QuocPhongNgo_MAPD724_Assignment5/QuocPhongNgo_MAPD724_Assignment5/Theme/ThemeManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "106"
-                  endingLineNumber = "106"
-                  offsetFromSymbolStart = "188">
-               </Location>
-               <Location
-                  uuid = "4669C594-6185-482F-A0B8-FF589DE1B9C0 - b10e1a2f1549ac60"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRDocumentSnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in QuocPhongNgo_MAPD724_Assignment5.ThemeManager.getTheme() -&gt; ()"
-                  moduleName = "QuocPhongNgo_MAPD724_Assignment5"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/phong/Documents/Centennial/Mobile%20course/724/mapd724_assignment5/QuocPhongNgo_MAPD724_Assignment5/QuocPhongNgo_MAPD724_Assignment5/Theme/ThemeManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "106"
-                  endingLineNumber = "106"
-                  offsetFromSymbolStart = "244">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

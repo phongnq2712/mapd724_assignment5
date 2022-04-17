@@ -59,7 +59,6 @@ class ThemeManager: ObservableObject {
         docRef.getDocument { (document, error) in
             if let document = document, document.exists {
                 var dataDescription = document.data().map(String.init(describing:)) ?? "nil"
-                print(dataDescription.components(separatedBy: ":")[1].dropLast())
                 let themeID = (dataDescription.components(separatedBy: ":")[1].dropLast() as NSString).integerValue
                 self.selectedTheme = self.themes[themeID]
             } else {

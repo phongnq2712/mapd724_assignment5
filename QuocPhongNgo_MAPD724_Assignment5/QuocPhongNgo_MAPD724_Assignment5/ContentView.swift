@@ -60,6 +60,19 @@ struct ContentView: View {
                         })
                     }.padding(.bottom, 30)
                     HStack {
+                        // Saved Directions Button
+                        NavigationLink(destination:SavedDirectionsView(), label: {
+                            // Start Button
+                            Text("SAVED DIRECTIONS")
+                            .font(Style.TextSize.subtitle3.font(.semiBold))
+                            .accentColor(.white)
+                            .foregroundColor(Color.accentColor)
+                            .frame(width: 125, height: 36, alignment: .center)
+                            .background(RoundedRectangle(cornerRadius: 24,
+                                                         style: .continuous).fill(Color.black))
+                        }).padding(.bottom, 30)
+                    }
+                    HStack {
                         // Setting Button
                         NavigationLink(destination:SettingView(), label: {
                             // Start Button

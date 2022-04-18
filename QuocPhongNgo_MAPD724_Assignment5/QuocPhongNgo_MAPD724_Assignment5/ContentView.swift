@@ -14,6 +14,7 @@ import FirebaseFirestore
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @EnvironmentObject private var themeManager: ThemeManager
+    @StateObject var mapData = CustomMapViewModel()
 
     var body: some View {
         NavigationView {
@@ -61,16 +62,20 @@ struct ContentView: View {
                     }.padding(.bottom, 30)
                     HStack {
                         // Saved Directions Button
-                        NavigationLink(destination:SavedDirectionsView(), label: {
-                            // Start Button
-                            Text("SAVED DIRECTIONS")
-                            .font(Style.TextSize.subtitle3.font(.semiBold))
-                            .accentColor(.white)
-                            .foregroundColor(Color.accentColor)
-                            .frame(width: 125, height: 36, alignment: .center)
-                            .background(RoundedRectangle(cornerRadius: 24,
-                                                         style: .continuous).fill(Color.black))
-                        }).padding(.bottom, 30)
+                        Button(action:  {
+//                            mapData.loadDirections()
+                        }) {
+                            NavigationLink(destination:SavedDirectionsView(), label: {
+                                // Start Button
+                                Text("SAVED DIRECTIONS")
+                                .font(Style.TextSize.subtitle3.font(.semiBold))
+                                .accentColor(.white)
+                                .foregroundColor(Color.accentColor)
+                                .frame(width: 125, height: 36, alignment: .center)
+                                .background(RoundedRectangle(cornerRadius: 24,
+                                                             style: .continuous).fill(Color.black))
+                            }).padding(.bottom, 30)
+                    }
                     }
                     HStack {
                         // Setting Button

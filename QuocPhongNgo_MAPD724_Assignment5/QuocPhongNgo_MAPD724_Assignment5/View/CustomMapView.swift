@@ -37,6 +37,10 @@ struct CustomMapView: UIViewRepresentable {
 //        let p2 = MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: 10.82, longitude: 106.62))
         let p2 = MKPlacemark(coordinate: mapData.destinationPlace)
         
+        let loc1 = CLLocation(latitude: p1.coordinate.latitude, longitude: p1.coordinate.longitude)
+        let loc2 = CLLocation(latitude: p2.coordinate.latitude, longitude: p2.coordinate.longitude)
+        let distance = loc1.distance(from: loc2)
+        
         let request = MKDirections.Request()
         request.source = MKMapItem(placemark: p1)
         request.destination = MKMapItem(placemark: p2)
@@ -54,7 +58,7 @@ struct CustomMapView: UIViewRepresentable {
         }
         // add directions to Firebase
         if self.directions.count > 0 {
-            db.collection("maps").whereField("start", isEqualTo: "A")
+            db.collection("maps").whereField("start", isEqualTo: mapData.annotationStart).whereField("destination", isEqualTo: mapData.annotationDestination)
                 .getDocuments() { (querySnapshot, err) in
                     if let err = err {
                         print("Error getting documents: \(err)")
@@ -68,6 +72,7 @@ struct CustomMapView: UIViewRepresentable {
                             self.ref = self.db.collection("maps").addDocument(data: [
                                 "start": mapData.annotationStart,
                                 "destination": mapData.annotationDestination,
+                                "distance": distance,
                                 "directions": self.directions
                             ]) { err in
                             if let err = err {

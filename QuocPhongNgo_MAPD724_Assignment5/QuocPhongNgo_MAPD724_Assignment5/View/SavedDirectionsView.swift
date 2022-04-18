@@ -10,16 +10,36 @@
 import SwiftUI
 
 struct SavedDirectionsView: View {
+    @StateObject var mapData = CustomMapViewModel()
+    
     var body: some View {
-        NavigationView {
-            VStack(alignment: .leading) {
-                Text("This app provides information related to 3 major cities in Canada: Toronto, Vancouver, and Montreal.")
-                    .font(.callout)
-                    .fontWeight(.medium)
-                    .foregroundColor(Color.black)
-                    .padding(.bottom, 10)
+        VStack {
+            Text("Directions")
+                .font(.headline)
+                .bold()
+                .padding()
+            
+            Divider().background(Color.blue)
+            
+            List {
+                if mapData.directionsMap.count > 0 {
+                    ForEach(0..<mapData.directionsMap.count, id: \.self) {i in
+                        let mData = mapData.directionsMap[i]
+                        Text("Start: ").foregroundColor(Color.blue)
+                        Text(mData?.start ?? "")
+                            .padding()
+                        Text("Destination: ").foregroundColor(Color.blue)
+                        Text(mData?.destination ?? "")
+                            .padding()
+                        Text("Distance: ").foregroundColor(Color.blue)
+                        Text(String(format: "%.2f", mData?.m_distance as! CVarArg))
+                            .padding()
+
+                        Divider().background(Color.blue)
+                    }
+                }
+                
             }
-            .padding(.vertical)
         }
     }
 }

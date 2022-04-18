@@ -10,6 +10,7 @@
 import SwiftUI
 import MapKit
 import CoreLocation
+import Firebase
 
 class CustomMapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     @Published var mapView = MKMapView()
@@ -32,6 +33,9 @@ class CustomMapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate 
     
     @Published var annotationStart = ""
     @Published var annotationDestination = ""
+    @Published var startArr = [String]()
+    @Published var destinationArr = [String]()
+    @Published var directionsMap: [Int: MapModel] = [Int: MapModel]()
     
     func updateMapType() {
         if mapType == .standard {
@@ -48,6 +52,46 @@ class CustomMapViewModel: NSObject, ObservableObject, CLLocationManagerDelegate 
 //        mapView.setRegion(region, animated: true)
 //        mapView.setVisibleMapRect(mapView.visibleMapRect, animated: true)
 //    }
+    override init() {
+        super.init()
+        self.loadDirections()
+    }
+    
+    func loadDirections() {
+        let db = Firestore.firestore()
+        var md  = MapModel()
+        db.collection("maps").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                var i = 0
+                var j = 0
+                for document in querySnapshot!.documents {
+                    if document.data().count > 0 {
+                        for (key,value) in document.data() {
+                            if i%4 == 0 {
+                                md = MapModel()
+                            }
+                            if key == "start" {
+                                md.start = value as? String
+                            } else if key == "destination" {
+                                md.destination = value as? String
+                            } else if key == "distance" {
+                                md.m_distance = value as? Double
+                            } else {
+                                md.m_directions = value as? [String]
+                            }
+                            if i%4 == 3 {
+                                self.directionsMap[j] = md
+                            }
+                            i += 1
+                        }
+                    }
+                    j += 1
+                }
+            }
+        }
+    }
     
     func searchQuery(searchType: String) {
         places.removeAll()

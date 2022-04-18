@@ -4,7 +4,7 @@
  * Author:         Quoc Phong Ngo
  * Student ID:   301148406
  * Version:        1.0
- * Date Modified:   April 17th, 2022
+ * Date Modified:   April 18th, 2022
  */
 
 import SwiftUI
@@ -14,15 +14,14 @@ struct SavedDirectionsView: View {
     
     var body: some View {
         VStack {
-            Text("Directions")
+            Text("Saved Directions")
                 .font(.headline)
                 .bold()
-                .padding()
-            
-            Divider().background(Color.blue)
+//                .padding()
             
             List {
                 if mapData.directionsMap.count > 0 {
+                    Text(String(mapData.directionsMap.count) + " saved direction(s)").foregroundColor(Color.red).bold()
                     ForEach(0..<mapData.directionsMap.count, id: \.self) {i in
                         let mData = mapData.directionsMap[i]
                         Text("Start: ").foregroundColor(Color.blue)
@@ -32,10 +31,15 @@ struct SavedDirectionsView: View {
                         Text(mData?.destination ?? "")
                             .padding()
                         Text("Distance: ").foregroundColor(Color.blue)
-                        Text(String(format: "%.2f", mData?.m_distance as! CVarArg))
+                        Text(String(format: "%.2f", mData?.m_distance as! CVarArg) + " meters")
                             .padding()
+                        Text("Directions: ").foregroundColor(Color.blue)
+                        let directionsArr = mData?.m_directions
+                        ForEach(0..<directionsArr!.count) {j in
+                            Text(directionsArr![j])
+                        }
 
-                        Divider().background(Color.blue)
+                        Rectangle().frame(width: 320, height: 5)
                     }
                 }
                 

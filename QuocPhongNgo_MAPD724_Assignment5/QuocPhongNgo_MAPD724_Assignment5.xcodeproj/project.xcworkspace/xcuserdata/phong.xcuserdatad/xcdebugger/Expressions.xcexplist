@@ -3,6 +3,14 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "closure #1 in closure #1 in closure #1 in SavedDirectionsView.body.getter:SavedDirectionsView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "directionsArr?[0]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "CustomMapView.updateUIView(_:context:):CustomMapView.swift">
       </ContextState>
       <ContextState
@@ -12,6 +20,12 @@
                value = "pointAnnotation.title">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in closure #1 in CustomMapViewModel.loadDirections():CustomMapViewModel.swift">
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in CustomMapViewModel.loadDirections():CustomMapViewModel.swift">
       </ContextState>
    </ContextStates>
 </VariablesViewState>
